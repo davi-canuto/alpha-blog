@@ -23,7 +23,6 @@ class ArticlesController < ApplicationController
       render 'new'
     end
   end
-""
   def update
     if @article.update(article_params)
       flash[:notice] = "Arrticle was updated successfully"
@@ -38,7 +37,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  private"
+  private
   def set_article
     @article = Article.find(params[:id])
   end
