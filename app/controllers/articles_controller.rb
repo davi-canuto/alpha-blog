@@ -7,8 +7,9 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
   end
+
   def new
-    @article = Article.new
+    @article = Article.new()
   end
 
   def edit
@@ -23,6 +24,7 @@ class ArticlesController < ApplicationController
       render 'new'
     end
   end
+
   def update
     if @article.update(article_params)
       flash[:notice] = "Arrticle was updated successfully"
