@@ -2,11 +2,12 @@
 #
 # Table name: users
 #
-#  id         :integer          not null, primary key
-#  username   :string
-#  email      :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id              :integer          not null, primary key
+#  username        :string
+#  email           :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string
 #
 class User < ApplicationRecord
   before_save { self.email = email.downcase }
@@ -22,5 +23,5 @@ class User < ApplicationRecord
                     length: {maximum: 100},
                     format: { with: VALID_EMAIL_REGEX }
 
-  # has_secure_passwordo
+  has_secure_password
 end
