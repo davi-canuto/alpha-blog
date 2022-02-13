@@ -24,6 +24,10 @@ gem 'annotate', '~> 3.1', '>= 3.1.1'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'will_paginate', '~> 3.3'
+
+gem 'ransack'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
