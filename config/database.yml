@@ -82,9 +82,3 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: doc_forms_production
-  username: doc_forms
-  password: <%= ENV['doc_forms_DATABASE_PASSWORD'] %>
