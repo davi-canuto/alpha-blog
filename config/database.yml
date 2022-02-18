@@ -21,9 +21,11 @@ default: &default
   adapter: postgresql
   encoding: utf-8
   host: localhost
-  pool: 15
+  pool: 5
   username: postgres
   password:
+  port: 5432
+
 
 
 development:
