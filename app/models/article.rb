@@ -2,7 +2,7 @@
 #
 # Table name: articles
 #
-#  id             :integer          not null, primary key
+#  id             :bigint           not null, primary key
 #  title          :string
 #  description_at :text
 #  created_at     :datetime
