@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :require_admin, except: [:index, :show]
+  impressionist :actions=>[:show, :index]
 
   def index
     @categories = Category.paginate(page: params[:page], per_page: 3)
@@ -38,6 +39,9 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @articles = @category.articles.paginate(page: params[:page], per_page: 5)
+
+    impressionist(@category)
+    @category.impressionist_count
   end
 
   private
